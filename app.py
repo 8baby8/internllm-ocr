@@ -53,7 +53,7 @@ class ChatOcr():
         boxes = [line[0] for line in result]
         txts = [line[1][0] for line in result]
         scores = [line[1][1] for line in result]
-        im_show = draw_ocr(image, boxes, txts, scores, font_path='/root/code/chatocr/simfang.ttf')
+        im_show = draw_ocr(image, boxes, txts, scores, font_path='./simfang.ttf')
         im_show = Image.fromarray(im_show)
         im_show.save('result.jpg')
         chatocr_res = self.geneate_res(self.ocr_result)
@@ -73,13 +73,13 @@ with gr.Blocks() as demo:
     with gr.Column():
         with gr.Row():
             image_input = gr.Image(type='filepath')
-            # detected_image_output = gr.Image(label="OCR识别结果", type='filepath')  # 新增图像输出组件
+            detected_image_output = gr.Image(label="OCR识别结果", type='filepath')  # 新增图像输出组件
 
         analysis_result = gr.Textbox(label="关键信息提取结果")
         analysis_button = gr.Button("分析图片")
 
-    # analysis_button.click(process_ocr, inputs=image_input, outputs=[detected_image_output, analysis_result])
-    analysis_button.click(process_ocr, inputs=image_input, outputs=analysis_result)
+    analysis_button.click(process_ocr, inputs=image_input, outputs=[detected_image_output, analysis_result])
+    # analysis_button.click(process_ocr, inputs=image_input, outputs=analysis_result)
 
 
 demo.launch()
