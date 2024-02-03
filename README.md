@@ -135,7 +135,7 @@ git clone https://github.com/8baby8/internllm-ocr.git
 
 [Farewell](https://github.com/8baby8)@飞桨星河社区UID:2460331
 
-[侯玉鹏](https://aistudio.baidu.com/personalcenter/thirdview/2544861)@
+[侯玉鹏](https://aistudio.baidu.com/personalcenter/thirdview/2544861)@飞桨星河社区UID:2544861
 
 ### 版权说明
 
