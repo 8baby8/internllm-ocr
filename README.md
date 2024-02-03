@@ -28,7 +28,7 @@
     ·
     <a href="https://github.com/8baby8/internllm-ocr/issues">报告Bug</a>
     ·
-    <a href="https://github.com/aJupyter/EmoLLM/issues">提出新特性</a>
+    <a href="https://github.com/8baby8/internllm-ocr/issues">提出新特性</a>
   </p>
 
 </p>
