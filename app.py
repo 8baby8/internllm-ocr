@@ -66,7 +66,7 @@ class ChatOcr():
         im_show = Image.fromarray(im_show)
         im_show.save('result.jpg')
         chatocr_res = self.geneate_res(self.ocr_result)
-        return chatocr_res
+        return 'result.jpg', chatocr_res
 
     
 # chatocr = ChatOcr(model_path='/root/code/chatocr/last_weight')
