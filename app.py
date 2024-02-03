@@ -6,7 +6,7 @@ from lmdeploy import turbomind as tm
 from openxlab.model import download
 from lmdeploy import pipeline, TurbomindEngineConfig, GenerationConfig
 
-download('Farewell1/internlm2-ocrchat-7b')
+download('Farewell1/internlm2-ocrchat-7b',output='model/')
 
 backend_config = TurbomindEngineConfig(cache_max_entry_count=0.1)
 gen_config = GenerationConfig(top_p=0.8,
@@ -15,7 +15,7 @@ gen_config = GenerationConfig(top_p=0.8,
                               max_new_tokens=1024)
 
 class ChatOcr():
-    def __init__(self, model_path='Farewell1/internlm2-ocrchat-7b') -> None:
+    def __init__(self, model_path='model/') -> None:
         self.ocr = PaddleOCR(use_angle_cls=True, lang="ch")
         self.tm_model = tm.TurboMind.from_pretrained(model_path, model_name='internlm2-chat-7b',engine_config=backend_config)
     
